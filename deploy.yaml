@@ -12,6 +12,9 @@ spec:
       labels:
         app: python-app
     spec:
+      tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect
       containers:
         - name: my-python
           image: python-image:latest
